@@ -1,8 +1,8 @@
 {
-    "name": "helsingborg-stad/algolia-multisite-enabler",
-    "homepage": "https://github.com/helsingborg-stad/algolia-multisite-enabler",
-    "description": "Plugin to configure email sender settings.",
-    "type": "wordpress-plugin",
+    "name": "helsingborg-stad/wpmu-filter-email",
+    "homepage": "https://github.com/helsingborg-stad/wpmu-filter-email",
+    "description": "Plugin to filter sender name and e-mail address for outgoing e-mails.",
+    "type": "wordpress-muplugin",
     "license": "MIT",
     "authors": [
           {
