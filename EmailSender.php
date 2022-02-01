@@ -10,7 +10,7 @@ namespace MunicipioMu;
 
 class EmailSender
 {
-    const DEFAULT_MAIL_FROM_USER_NAME = 'no-reply';
+    const DEFAULT_MAIL_FROM_USERNAME = 'no-reply';
 
     public function __construct() 
     {
@@ -30,7 +30,7 @@ class EmailSender
 
     public function getMailFromUsername()
     {
-        return defined('MUNICIPIO_MAIL_FROM_USERNAME') && !empty(MUNICIPIO_MAIL_FROM_USERNAME) ? MUNICIPIO_MAIL_FROM_USERNAME : self::DEFAULT_MAIL_FROM_USER_NAME;
+        return defined('MUNICIPIO_MAIL_FROM_USERNAME') && !empty(MUNICIPIO_MAIL_FROM_USERNAME) ? MUNICIPIO_MAIL_FROM_USERNAME : self::DEFAULT_MAIL_FROM_USERNAME;
     }
 
     public function getMailFromDomain()
