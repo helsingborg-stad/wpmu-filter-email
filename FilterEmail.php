@@ -19,8 +19,18 @@ class FilterEmail
 
     public function init()
     {
-        add_filter('wp_mail_from', [$this, 'getMailFromEmail'], 5);
-        add_filter('wp_mail_from_name', [$this, 'getMailFromName'], 5);
+        add_filter('wp_mail_from', [$this, 'filterMailFrom'], 5);
+        add_filter('wp_mail_from_name', [$this, 'filterMailFromName'], 5);
+    }
+
+    public function filterMailFrom($original)
+    {
+        return explode('@', $original)[0] === 'no-reply' ? $this->getMailFromEmail() : $original;
+    }
+
+    public function filterMailFromName($original)
+    {
+        return $original === 'WordPress' ? $this->getMailFromName() : $original;
     }
 
     public function getSiteDomain()
